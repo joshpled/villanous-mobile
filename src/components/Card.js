@@ -1,7 +1,8 @@
 import React from "react";
 import { View, Text, SafeAreaView, StyleSheet, Image } from "react-native";
+import one from '../assets/characterPortraits/Card_Yzma.png'
 
-export default function Card({ power, cost, description, type, image, screen }) {
+export default function Card({ power, cost, description, type, image, screen, portrait }) {
   return (
     <View style={screen === "character" ? styles.characterBackground : styles.background}>
       {screen === "character" || (
@@ -14,10 +15,10 @@ export default function Card({ power, cost, description, type, image, screen }) 
           </View>
         </>
       )}
-      <Image style={styles.mainImage} source={{ uri: "https://picsum.photos/200" }} />
-      <View style={styles.description}>
+      <Image style={styles.mainImage} source={one} />
+      {screen === "character" || <View style={styles.description}>
         <Text style={styles.descriptionText}>Hello</Text>
-      </View>
+      </View>}
       {screen === "character" || (
         <View style={styles.type}>
           <Text style={styles.descriptionText}>Type of Card</Text>
@@ -52,9 +53,11 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.3,
   },
   mainImage: {
-    margin: 10,
+    // margin: 10,
     flex: 2,
-    borderTopLeftRadius: 20,
+    // borderTopLeftRadius: 20,
+    maxWidth: 300,
+    maxHeight: 400
   },
   description: {
     margin: 10,

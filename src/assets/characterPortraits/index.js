@@ -1,0 +1,20 @@
+import Yzma from "./Card_Yzma.png";
+import Hook from "./DVG_Captain_Hook.png";
+import Cruella from "./DVG_Cruella_De_Vil.png";
+import Facilier from "./DVG_Dr_Facilier.png";
+import EvilQueen from "./DVG_Evil_Queen.png";
+import Gaston from "./DVG_Gaston.png";
+import Hades from "./DVG_Hades.png";
+import HornedKing from "./DVG_Horned_King.png";
+import Jafar from "./DVG_Jafar.png";
+import LadyTre from "./DVG_Lady_Tremaine.png";
+import Maleficient from "./DVG_Maleficent.png";
+import Gothel from "./DVG_Mother_Gothel.png";
+import Pete from "./DVG_Pete.png";
+import Prince from "./DVG_Prince_John.png";
+import Ratigan from "./DVG_Ratigan.png";
+import Scar from "./DVG_Scar.png";
+import QueenOHearts from "./DVGQueen_of_Hearts.png";
+import Ursula from "./DVGUrsula.png";
+
+export { Yzma, Hook, Cruella, Facilier, EvilQueen, Gaston, Hades, HornedKing, Jafar, LadyTre,Maleficient,Gothel,Pete,Prince,Ratigan,Scar,QueenOHearts,Ursula };

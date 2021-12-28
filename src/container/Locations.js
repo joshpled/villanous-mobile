@@ -16,30 +16,7 @@ export default function Locations() {
       <Location/>
       <Location/>
       <Location/>
-      {/* <View
-        style={{
-          flex: 1,
-          backgroundColor: "purple",
-        }}
-      />
-      <View
-        style={{
-          flex: 1,
-          backgroundColor: "gold",
-        }}
-      />
-      <View
-        style={{
-          flex: 1,
-          backgroundColor: "chartreuse",
-        }}
-      />
-      <View
-        style={{
-          flex: 1,
-          backgroundColor: "hotpink",
-        }}
-      /> */}
+  
     </View>
   );
 }

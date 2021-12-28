@@ -4,6 +4,7 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import Home from "./src/screens/Home";
 import CharacterSelection from "./src/screens/CharacterSelection";
+import Board from './src/screens/Board'
 
 const Stack = createNativeStackNavigator();
 
@@ -18,6 +19,7 @@ export default function App() {
         >
           <Stack.Screen name="Home" component={Home} />
           <Stack.Screen name="Character Selection" component={CharacterSelection} />
+          <Stack.Screen name="Game" component={Board} />
         </Stack.Navigator>
       </NavigationContainer>
       <StatusBar hidden={true} />
