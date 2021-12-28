@@ -1,29 +1,29 @@
 import React from "react";
-import { View, } from "react-native";
-import { Ionicons } from "@expo/vector-icons";
+import { View } from "react-native";
+import * as FileSystem from "expo-file-system";
 
-import PlayerHand from "../container/PlayerHand";
 import Locations from "../container/Locations";
 import Status from "../container/Status";
-import Pressable from "react-native/Libraries/Components/Pressable/Pressable";
 
-export default function Board({navigation}) {
+export default function Board({ route, navigation: { goBack } }) {
+  const { selectedId } = route.params;
+  let thisthing = () => {
+    FileSystem.readDirectoryAsync("file:///Users/joshpled/Documents/Code/Villanous-Mobile/src/assets/characterPortraits")
+      .then((x) => console.log("this is ", x))
+      .catch((err) => console.log("this is", err));
+  };
+  console.log(thisthing());
 
-    return (
-      <View
-        style={{
-          flex: 1,
-          alignItems: "flex-start",
-          padding: 20,
-        }}
-      >
-        <Pressable onPress={navigation.goBack}>
-          <Ionicons name="arrow-back-circle-outline" size={50} color="black" />
-        </Pressable>
-        <Status />
-        <Locations />
-        <PlayerHand />
-      </View>
-    );
-  
+  return (
+    <View
+      style={{
+        flex: 1,
+        alignItems: "flex-start",
+        padding: 20,
+      }}
+    >
+      <Status goBack={goBack} />
+      <Locations />
+    </View>
+  );
 }

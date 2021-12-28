@@ -4,6 +4,8 @@ import CharacterCard from "../components/CharacterCard";
 import New from "../assets/New.png";
 import { Ionicons } from "@expo/vector-icons";
 
+
+
 import {
   Yzma,
   Hook,
@@ -29,8 +31,7 @@ import CircleButton from "../components/CircleButton";
 
 export default function CharacterSelection({ navigation: { navigate, goBack } }) {
   const [selectedId, setSelectedId] = useState(null);
-
-  const goToGame = () => navigate("Game");
+  const goToGame = () => navigate("Game", {selectedId} );
 
   const characterPortraits = [
     { portrait: Yzma, id: 1 },
@@ -69,7 +70,8 @@ export default function CharacterSelection({ navigation: { navigate, goBack } })
       }}
     >
       <SafeAreaView>
-        <Pressable onPress={() => navigate("Home")} style={{position: 'absolute', zIndex: 999}}>
+        <Pressable onPress={() => navigate("Home")} 
+        style={{ position: "absolute", zIndex: 999 }}>
           <Ionicons name="arrow-back-circle-outline" size={50} color="white" style={{ top: 20, left: 10 }} />
         </Pressable>
         <FlatList

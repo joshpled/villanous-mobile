@@ -16,14 +16,13 @@ const styles = StyleSheet.create({
     alignItems: "stretch",
     flex: 1,
     backgroundColor: "whitesmoke",
-    borderColor: "black",
-    borderWidth: 2,
+    
     shadowColor: "black",
     shadowOffset: { width: 5, height: 5 },
     shadowOpacity: 0.3,
   },
   mainImage: {
-    margin: 10,
+    margin: 5,
     flex: 2,
   },
   description: {

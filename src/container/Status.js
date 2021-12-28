@@ -1,7 +1,8 @@
 import React from "react";
-import { View, Text } from "react-native";
+import { View, Text, Pressable } from "react-native";
+import { Ionicons } from "@expo/vector-icons";
 
-export default function Status() {
+export default function Status({goBack}) {
   return (
     <View
       style={{
@@ -10,7 +11,10 @@ export default function Status() {
         flexDirection: "row",
       }}
     >
-      <View style={{ flex: 1, justifyContent: "center" }}>
+      <Pressable onPress={goBack}>
+          <Ionicons name="arrow-back-circle-outline" size={50} color="black" />
+        </Pressable>
+      <View style={{ flex: 1, justifyContent: "center", marginLeft: 10 }}>
         <Text style={{ fontSize: 20 }}>Power: 20</Text>
         <Text style={{ fontSize: 20 }}>Special:</Text>
       </View>
